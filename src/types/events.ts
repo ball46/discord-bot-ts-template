@@ -19,7 +19,7 @@ export type EventKeys = keyof ClientEvents
     * EvenExec is a function that executes when an event is fired
  */
 export type EvenExec<T extends EventKeys> =
-    (props: EventProps, ...args: ClientEvents[T]) => Awaitable<void>
+    (props: EventProps, ...args: ClientEvents[T]) => Awaitable<unknown>
 
 
 export interface Event<T extends EventKeys> {

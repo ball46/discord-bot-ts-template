@@ -15,7 +15,6 @@ const client = new Client({
 registerEvents(client, events)
 
 client.login(keys.clientToken)
-    .then(() => console.log('Logged in!'))
     .catch((err) => {
         console.error(err)
         process.exit(1)

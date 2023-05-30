@@ -1,7 +1,8 @@
 import { Keys } from '../types'
 
 const keys : Keys ={
-    clientToken : process.env.CLIENT_TOKEN ?? 'nil'
+    clientToken : process.env.CLIENT_TOKEN ?? 'nil',
+    GuildId: process.env.GUILD_ID ?? 'nil'
 }
 
 if (Object.values(keys).includes('nil')) {

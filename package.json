@@ -7,7 +7,8 @@
     "start": "ts-node src/index.ts",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "tsc",
-    "prod": "node dist/index.js"
+    "deploy" : "cross-env IS_SCRIPT=true ts-node src/index.ts",
+    "deploy-prod" : "cross-env IS_SCRIPT=true NODE_ENV=production npm run deploy"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "discord.js": "^14.11.0",
     "dotenv": "^16.0.3"
   }
